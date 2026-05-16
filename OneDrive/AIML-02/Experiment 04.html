@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Marks Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h2 {
+            color: #2E86C1;
+        }
+        p {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Student Marks Calculator</h2>
+
+<script>
+    // Step 1: Take number of subjects
+    let num = prompt("Enter no. of subjects"); // number of subjects
+    let total = 0; // to store total marks
+
+    // Step 2: Loop to take marks
+    for (let i = 1; i <= num; i++) {
+        let marks = prompt("Enter marks for subject " + i);
+        total = total + Number(marks); // convert input to number and add
+    }
+
+    // Step 3: Calculate average
+    let average = total / num;
+
+    // Step 4: Determine grade and pass/fail
+    let grade;
+    let result;
+
+    if (average >= 90) {
+        grade = "A";
+    } else if (average >= 75) {
+        grade = "B";
+    } else if (average >= 50) {
+        grade = "C";
+    } else {
+        grade = "D";
+    }
+
+    result = (average >= 50) ? "Pass" : "Fail";
+
+    // Step 5: Display results dynamically
+    document.write("<h2>Results:</h2>");
+    document.write("Total Marks: " + total + "<br>");
+    document.write("Average Marks: " + average + "<br>");
+    document.write("Grade: " + grade + "<br>");
+    document.write("Result: " + result + "<br>");
+</script>
+
+</body>
+</html>

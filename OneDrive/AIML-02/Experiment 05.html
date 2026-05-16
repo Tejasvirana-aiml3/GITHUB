@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMPLOYEE MANAGEMENT SYSTEM</title>
+    <style>
+        .box {
+            border : 2px solid black;
+            padding:20px;
+            width: 500px;;
+            height: 500px;;
+            background-color:lightgray;
+            border-radius: 10px;
+            margin: auto;
+            box-shadow: 0px 0px 10px red;
+
+        }
+        button{
+           background-color: aqua;
+           margin: 10px;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+    <b><i>
+        <h1>EMPLOYEE MANAGEMENT SYSTEM</h1>
+       </i>
+    </b>
+    Employee Name  : <input type="text" placeholder="Employee Name" id="name"><br><br>
+    Employee   ID  : <input type="text" placeholder="Employee ID" id="ID"><br><br>
+    Salary         : <input type="text" placeholder="salary" id="salary"><br><br>
+    Department     : <input type="text" placeholder="Department" id="dept"><br><br>
+
+    <button onclick="Details()">Add Employee</button>
+    <button onclick="Details()">Display All</button>
+    <button onclick="Details()">Salary>50000</button><br>
+    <button onclick="Details()">Total Salary</button>
+    <button onclick="Details()">Average salary</button>
+    <button onclick="Details()">Count Department</button> 
+    <p id="result"></p>
+    </div>
+    
+    <script>
+       function Details(){
+        
+        let name = document.getElementById("name").value;
+        let ID = document.getElementById("ID").value;
+        let salary = document.getElementById("salary").value;
+        let dept = document.getElementById("dept").value;
+
+       document.getElementById("result").innerHTML =
+       name +" | "+ID + " | "+ salary +" | "+ dept;
+
+        
+       }
+      
+    </script>
+    
+</body>
+</html>
